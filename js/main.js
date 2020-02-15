@@ -31,6 +31,7 @@ isScreenSmall.addListener(screenResize);
 
 video.addEventListener("playing", () => {
   console.log("playing called");
+  document.getElementById("loading").style.display="none";
   const canvas = faceapi.createCanvasFromMedia(video);
   let container = document.querySelector(".container");
   container.append(canvas);
